@@ -1,0 +1,14 @@
+.chrome-export/
+.chrome-test/
+.tmp-chrome-profile/
+.tmp-edge-profile/
+.tmp_hf_dvworld_git/
+.tmp_pdf_wrap.html
+DVSheet-main/
+hf_dataset_stage/
+hf_repo_clone/
+build_hf_dataset_payload.py
+chrome_test.png
+index copy.html
+index copy 2.html
+figures/previews/
