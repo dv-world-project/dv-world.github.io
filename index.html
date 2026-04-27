@@ -112,6 +112,52 @@
       color: var(--amber);
     }
 
+    #overview .eyebrow {
+      padding: 14px 26px;
+      font-size: 1.32rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    #tracks .eyebrow {
+      padding: 11px 20px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    #tracks .section-subtitle {
+      max-width: 1000px;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    #leaderboard .eyebrow {
+      padding: 11px 20px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    #leaderboard .section-subtitle {
+      max-width: 1100px;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    #atlas .eyebrow {
+      padding: 11px 20px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    #atlas .section-subtitle {
+      max-width: 1100px;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
     .section-title {
       margin: 0 0 12px;
       font-size: clamp(2.1rem, 4vw, 3.7rem);
@@ -266,7 +312,7 @@
 
     .hero-title {
       margin: 0;
-      font-size: clamp(2rem, 4.9vw, 3.7rem);
+      font-size: clamp(1.7rem, 4.2vw, 3.1rem);
       line-height: 1.02;
       letter-spacing: -0.05em;
     }
@@ -331,6 +377,8 @@
       max-width: 980px;
       padding: 22px 24px;
       border-radius: 28px;
+      background: transparent;
+      box-shadow: none;
     }
 
     .author-line,
@@ -338,12 +386,23 @@
     .note-line {
       margin: 0;
       line-height: 1.7;
+      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      font-variant-ligatures: none;
+      text-wrap: pretty;
     }
 
     .author-line {
       font-size: 1.08rem;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
       line-height: 1.9;
+    }
+
+    .author-line sup,
+    .institution-line sup,
+    .note-line sup {
+      font-size: 0.72em;
+      line-height: 0;
+      vertical-align: super;
     }
 
     .institution-line {
@@ -1225,7 +1284,7 @@
       }
 
       .hero-title {
-        font-size: clamp(1.8rem, 10vw, 2.8rem);
+        font-size: clamp(1.55rem, 8.5vw, 2.35rem);
       }
 
       .news-grid,
@@ -1259,7 +1318,6 @@
           <a href="#news">News</a>
           <a href="#overview">Overview</a>
           <a href="#tracks">Tracks</a>
-          <a href="#figures">Figures</a>
           <a href="#leaderboard">Leaderboard</a>
           <a href="#atlas">Error Atlas</a>
           <a href="#citation">Citation</a>
@@ -1285,11 +1343,11 @@
           <h1 class="hero-title">DV-World: Benchmarking Data Visualization Agents in Real-World Scenarios</h1>
           <div class="author-card">
             <p class="author-line">Jinxiang Meng<sup>1,2*</sup>, Shaoping Huang<sup>1,2*</sup>, Fangyu Lei<sup>1,2*</sup>, Jingyu Guo<sup>1</sup>, Haoxiang Liu<sup>1</sup>, Jiahao Su<sup>1</sup>, Sihan Wang<sup>1</sup>, Yao Wang<sup>2</sup>, Enrui Wang<sup>1</sup>, Ye Yang<sup>1</sup>, Hongze Chai<sup>1</sup>, Jinming Lv<sup>1</sup>, Anbang Yu<sup>1</sup>, Huangjing Zhang<sup>1</sup>, Yitong Zhang<sup>3</sup>, Yiming Huang<sup>1</sup>, Zeyao Ma<sup>4</sup>, Shizhu He<sup>1</sup>, Jun Zhao<sup>1</sup>, Kang Liu<sup>1&dagger;</sup></p>
-            <p class="institution-line"><sup>1</sup>Institute of Automation, CAS, <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>National University of Singapore, <sup>4</sup>Renmin University of China</p>
+            <p class="institution-line"><sup>1</sup>Institute of Automation, CAS, <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>NUS, <sup>4</sup>Renmin University of China</p>
             <p class="note-line"><sup>*</sup>Equal Contribution, <sup>&dagger;</sup>Corresponding authors</p>
           </div>
           <p class="hero-summary">
-            Real-world data visualization requires <strong>native environmental grounding</strong>, <strong>cross-platform evolution</strong>, and <strong>proactive intent alignment</strong>. DV-World introduces <strong>260 tasks</strong> across <strong>DV-Sheet</strong>, <strong>DV-Evolution</strong>, and <strong>DV-Interact</strong>, with a hybrid evaluation framework that combines numerical table-value alignment and rubric-based semantic visual assessment.
+            DV-World benchmarks data visualization agents in realistic settings. It includes <strong>260 tasks</strong> across <strong>DV-Sheet</strong>, <strong>DV-Evolution</strong>, and <strong>DV-Interact</strong>, with hybrid evaluation of both values and visual quality.
           </p>
           <div class="hero-badges">
             <span class="hero-badge"><i class="fa-solid fa-cubes"></i>260 tasks</span>
@@ -1299,10 +1357,10 @@
             <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i>Hybrid evaluation</span>
           </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="./8190_DV_World_Benchmarking_Dat.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i>Paper</a>
-            <a class="button button-secondary" href="#"><i class="fa-brands fa-github"></i>Code</a>
-            <a class="button button-secondary" href="#"><i class="fa-solid fa-database"></i>Data</a>
-            <a class="button button-secondary" href="#news"><i class="fa-solid fa-bullhorn"></i>News</a>
+            <a class="button button-primary" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i>Paper</a>
+            <a class="button button-secondary" href="https://github.com/DA-Open/DV-World"><i class="fa-brands fa-github"></i>Code</a>
+            <a class="button button-secondary" href="https://huggingface.co/datasets/DV-World/dvworld"><i class="fa-solid fa-database"></i>Data</a>
+            <a class="button button-secondary" href="#"><i class="fa-solid fa-bullhorn"></i>News</a>
             <a class="button button-secondary" href="#atlas"><i class="fa-solid fa-bug"></i>Error Atlas</a>
           </div>
           <div class="visual-storyboard">
@@ -1324,7 +1382,7 @@
       </div>
     </section>
 
-    <section class="section" id="news">
+    <!-- <section class="section" id="news">
       <div class="container reveal">
         <div class="eyebrow"><i class="fa-solid fa-bullhorn"></i>News</div>
         <h2 class="section-title">Project Updates</h2>
@@ -1347,31 +1405,31 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section" id="overview">
       <div class="container reveal">
         <div class="eyebrow"><i class="fa-solid fa-sparkles"></i>Abstract</div>
-        <h2 class="section-title">Benchmark Scope And Motivation</h2>
-        <p class="section-subtitle">DV-World is designed to close the gap between lightweight chart-generation benchmarks and the actual lifecycle of professional visualization work.</p>
+        <!-- <h2 class="section-title">Benchmark Scope And Motivation</h2> -->
+        <p class="section-subtitle">DV-World evaluates data visualization agents in more realistic workflows.</p>
         <div class="overview-grid">
           <article class="overview-card">
             <h3>Abstract Summary</h3>
-            <p>Existing benchmarks often rely on code sandbox confinement, single-language creation tasks, or perfect-intent assumptions. DV-World instead evaluates data visualization agents in realistic software-grounded settings that require spreadsheet manipulation, cross-modal evolution, and proactive clarification.</p>
+            <p>Many existing benchmarks focus on simplified chart generation. DV-World tests agents in software-grounded settings that require editing spreadsheets, adapting reference visuals, and clarifying ambiguous requests.</p>
             <ul>
-              <li><i class="fa-solid fa-check"></i><span>DV-Sheet covers native spreadsheet chart creation, diagnostic repair, and dashboard composition.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>DV-Evolution evaluates adaptation from reference visuals and datasets into executable outputs across diverse frameworks.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>DV-Interact evaluates whether agents ask clarifying questions and align to ambiguous user intent.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>The paper reports that state-of-the-art models still achieve less than 50% overall performance.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>DV-Sheet focuses on spreadsheet charting, repair, and dashboard tasks.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>DV-Evolution tests visual adaptation across data and frameworks.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>DV-Interact measures clarification and intent alignment.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Current leading models still score below 50% overall.</span></li>
             </ul>
           </article>
           <article class="overview-card">
             <h3>Evaluation Framework</h3>
             <div class="benchmark-grid">
-              <div class="metric-card"><i class="fa-solid fa-cubes"></i><strong>260</strong><span>Tasks spanning realistic visualization workflows.</span></div>
+              <div class="metric-card"><i class="fa-solid fa-cubes"></i><strong>260</strong><span>Tasks across realistic workflows.</span></div>
               <div class="metric-card"><i class="fa-solid fa-layer-group"></i><strong>3</strong><span>Domains: DV-Sheet, DV-Evolution, DV-Interact.</span></div>
-              <div class="metric-card"><i class="fa-solid fa-compass"></i><strong>Native</strong><span>Grounded in spreadsheet and software execution environments.</span></div>
-              <div class="metric-card"><i class="fa-solid fa-scale-balanced"></i><strong>Hybrid</strong><span>Combines table-value alignment with MLLM-as-a-judge style semantic assessment.</span></div>
+              <div class="metric-card"><i class="fa-solid fa-compass"></i><strong>Native</strong><span>Grounded in real software environments.</span></div>
+              <div class="metric-card"><i class="fa-solid fa-scale-balanced"></i><strong>Hybrid</strong><span>Combines table-value checks with semantic judgment.</span></div>
             </div>
           </article>
         </div>
@@ -1381,72 +1439,38 @@
     <section class="section" id="tracks">
       <div class="container reveal">
         <div class="eyebrow"><i class="fa-solid fa-layer-group"></i>Benchmark Construction</div>
-        <h2 class="section-title">Three domains in the paper</h2>
-        <p class="section-subtitle">The benchmark definition in the paper spans native spreadsheet manipulation, cross-modal logic evolution, and interactive clarification under ambiguity.</p>
+        <!-- <h2 class="section-title">Three domains in the paper</h2> -->
+        <p class="section-subtitle">DV-World covers three core settings: spreadsheet execution, visual adaptation, and interactive clarification.</p>
         <div class="track-grid">
           <article class="track-card" data-track="sheet">
             <span class="track-pill"><i class="fa-solid fa-table-cells-large"></i>DV-Sheet</span>
             <h3>Native spreadsheet manipulation</h3>
-            <p>The agent edits spreadsheets directly to create charts, repair defective visualizations, and compose dashboards under native workbook constraints.</p>
+            <p>Agents work directly in spreadsheets to create, repair, and organize visualizations.</p>
             <ul class="track-features">
-              <li><i class="fa-solid fa-check"></i><span>Direct range binding and object-level editing.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Repair tasks judged as precise interventions, not regenerated screenshots.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Dashboard tasks emphasize insightfulness, not just rendering.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Direct spreadsheet editing.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Precise chart repair.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Dashboard composition.</span></li>
             </ul>
           </article>
           <article class="track-card" data-track="evol">
             <span class="track-pill"><i class="fa-solid fa-code-compare"></i>DV-Evolution</span>
             <h3>Cross-modal logic evolution</h3>
-            <p>The agent must reverse-engineer visual semantics from reference artifacts and evolve them into executable outputs for new data and new languages.</p>
+            <p>Agents adapt reference visuals into correct outputs for new data and new frameworks.</p>
             <ul class="track-features">
-              <li><i class="fa-solid fa-check"></i><span>Library-aware transfer instead of raw code generation.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Highlights portability gaps and layout mismatches.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Perfect fit for wrong-vs-better visual storytelling.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Reference-to-code transfer.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Cross-framework adaptation.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Layout and semantic fidelity.</span></li>
             </ul>
           </article>
           <article class="track-card" data-track="interact">
             <span class="track-pill"><i class="fa-solid fa-comments"></i>DV-Interact</span>
             <h3>Proactive clarification under ambiguity</h3>
-            <p>The agent interacts with a user-simulator based environment and must resolve ambiguity through legitimate clarification rather than assumption-first execution.</p>
+            <p>Agents must ask the right questions before acting when user intent is unclear.</p>
             <ul class="track-features">
-              <li><i class="fa-solid fa-check"></i><span>User-simulator driven evaluation.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Measures inquiry deficits and alignment behavior.</span></li>
-              <li><i class="fa-solid fa-check"></i><span>Exposes interactive avoidance clearly and visually.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>User-simulator evaluation.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Clarification quality.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Intent alignment.</span></li>
             </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="figures">
-      <div class="container reveal">
-        <div class="eyebrow"><i class="fa-solid fa-panorama"></i>Figures</div>
-        <h2 class="section-title">Only the figures a reader actually wants first</h2>
-        <p class="section-subtitle">Instead of throwing every figure into one rail, this section now keeps only the most important visuals: the main framework, the evaluation figure, and one quick behavior snapshot.</p>
-        <div class="key-figures">
-          <article class="figure-card">
-            <span class="slide-label"><i class="fa-solid fa-chart-line"></i>Evaluation</span>
-            <div class="figure-frame">
-              <div class="pdf-host pdf-host--figure is-loading" data-pdf-src="./figures/eval.pdf"><span><i class="fa-solid fa-spinner fa-spin"></i> Loading figure...</span></div>
-            </div>
-            <h4>Evaluation figure</h4>
-            <p>The most important scoring and evaluation view, rendered at the same ratio as the other cards.</p>
-          </article>
-          <article class="figure-card">
-            <span class="slide-label"><i class="fa-solid fa-image"></i>Snapshot</span>
-            <div class="figure-frame">
-              <img src="./figures/user_diff_model.png" alt="Model difference snapshot">
-            </div>
-            <h4>Model behavior snapshot</h4>
-            <p>A fast visual summary that adds variety without introducing another PDF card.</p>
-          </article>
-          <article class="figure-card">
-            <span class="slide-label"><i class="fa-solid fa-user-gear"></i>Simulator</span>
-            <div class="figure-frame">
-              <div class="pdf-host pdf-host--figure is-loading" data-pdf-src="./figures/User_Simulator_Analysis.pdf"><span><i class="fa-solid fa-spinner fa-spin"></i> Loading figure...</span></div>
-            </div>
-            <h4>User simulator analysis</h4>
-            <p>An important supporting figure for understanding the interaction benchmark setup.</p>
           </article>
         </div>
       </div>
@@ -1455,16 +1479,18 @@
     <section class="section" id="leaderboard">
       <div class="container reveal">
         <div class="eyebrow"><i class="fa-solid fa-trophy"></i>Leaderboard</div>
-        <h2 class="section-title">Paper Results</h2>
-        <p class="section-subtitle">This leaderboard shows paper-reported results rather than demo values. We use the DVSheet-Crea sensitivity table, the DV-Evol aggregated table, and the reported DV-Interact settings to surface all model performances in the draft.</p>
+        <!-- <h2 class="section-title">Paper Results</h2> -->
+        <!-- <p class="section-subtitle">This leaderboard shows paper-reported results rather than demo values. We use the DVSheet-Crea sensitivity table, the DV-Evol aggregated table, and the reported DV-Interact settings to surface all model performances in the draft.</p> -->
         <div class="leaderboard-shell">
           <div class="leaderboard-head">
             <div class="leaderboard-copy">
               <h3>Task-specific leaderboard</h3>
-              <p>Each row shows the three paper-reported settings for the selected task. The first setting is used as the default sort order.</p>
+              <p>Each tab shows the main paper-reported score for the selected task.</p>
             </div>
             <div class="sort-tabs">
               <button class="sort-tab is-active" type="button" data-leaderboard-task="sheet_create">DVSheet-Crea</button>
+              <button class="sort-tab" type="button" data-leaderboard-task="sheet_fix">DVSheet-Fix</button>
+              <button class="sort-tab" type="button" data-leaderboard-task="sheet_dash">DVSheet-Dash</button>
               <button class="sort-tab" type="button" data-leaderboard-task="evol">DV-Evol</button>
               <button class="sort-tab" type="button" data-leaderboard-task="interact">DV-Interact</button>
             </div>
@@ -1477,8 +1503,8 @@
     <section class="section" id="atlas">
       <div class="container reveal">
         <div class="eyebrow"><i class="fa-solid fa-bug"></i>Error Atlas</div>
-        <h2 class="section-title">Error cases organized by task</h2>
-        <p class="section-subtitle">Users can switch among different tasks first, then horizontally browse the actual cases inside each task. This makes the benchmark structure much clearer than throwing every case into one long rail.</p>
+        <!-- <h2 class="section-title">Error cases organized by task</h2> -->
+        <p class="section-subtitle">Browse error cases by task instead of scanning one long mixed gallery.</p>
 
         <div class="task-tabs">
           <button class="task-tab is-active" type="button" data-task-target="task-create">DV-Sheet Create</button>
@@ -1667,54 +1693,90 @@
     const leaderboardTaskData = {
       sheet_create: {
         title: "DVSheet-Crea results",
-        source: "Paper Table 17 sensitivity analysis with w = 0.5 / 0.4 / 0.6",
-        labels: ["w=0.5", "w=0.4", "w=0.6"],
+        source: "Paper Table 17 results under w = 0.5",
+        labels: ["w=0.5"],
         rows: [
-          { name: "Gemini-3-Pro", type: "proprietary", values: [36.07, 36.35, 35.79] },
-          { name: "GPT-5.2", type: "proprietary", values: [34.43, 34.54, 34.31] },
-          { name: "GPT-4.1", type: "proprietary", values: [29.98, 29.78, 30.17] },
-          { name: "DeepSeek-V3.2", type: "open", values: [28.31, 27.81, 28.80] },
-          { name: "Kimi-K2-Thinking", type: "proprietary", values: [26.94, 26.77, 27.11] },
-          { name: "Gemini-2.5-Pro", type: "proprietary", values: [25.75, 25.62, 25.88] },
-          { name: "Azure-Grok-4", type: "proprietary", values: [21.29, 21.59, 20.99] },
-          { name: "GLM-4.7", type: "open", values: [19.16, 21.79, 16.52] },
-          { name: "Qwen-3-Coder-Plus", type: "open", values: [17.04, 17.21, 16.86] },
-          { name: "Qwen-3-235B-Thinking", type: "open", values: [14.32, 14.69, 13.95] },
-          { name: "Qwen-3-8B", type: "open", values: [1.52, 1.48, 1.57] }
+          { name: "Gemini-3-Pro", type: "proprietary", values: [36.07] },
+          { name: "GPT-5.2", type: "proprietary", values: [34.43] },
+          { name: "GPT-4.1", type: "proprietary", values: [29.98] },
+          { name: "DeepSeek-V3.2", type: "open", values: [28.31] },
+          { name: "Kimi-K2-Thinking", type: "proprietary", values: [26.94] },
+          { name: "Gemini-2.5-Pro", type: "proprietary", values: [25.75] },
+          { name: "Azure-Grok-4", type: "proprietary", values: [21.29] },
+          { name: "GLM-4.7", type: "open", values: [19.16] },
+          { name: "Qwen-3-Coder-Plus", type: "open", values: [17.04] },
+          { name: "Qwen-3-235B-Thinking", type: "open", values: [14.32] },
+          { name: "Qwen-3-8B", type: "open", values: [1.52] }
+        ]
+      },
+      sheet_fix: {
+        title: "DVSheet-Fix results",
+        source: "Paper Table 17 fix success rate",
+        labels: [""],
+        rows: [
+          { name: "Gemini-3-Pro", type: "proprietary", values: [48.00] },
+          { name: "Kimi-K2-Thinking", type: "proprietary", values: [46.00] },
+          { name: "GPT-5.2", type: "proprietary", values: [42.00] },
+          { name: "Azure-Grok-4", type: "proprietary", values: [42.00] },
+          { name: "GLM-4.7", type: "open", values: [40.00] },
+          { name: "Gemini-2.5-Pro", type: "proprietary", values: [40.00] },
+          { name: "DeepSeek-V3.2", type: "open", values: [36.00] },
+          { name: "GPT-4.1", type: "proprietary", values: [32.00] },
+          { name: "Qwen-3-Coder-Plus", type: "open", values: [24.00] },
+          { name: "Qwen-3-235B-Thinking", type: "open", values: [22.00] },
+          { name: "Qwen-3-8B", type: "open", values: [14.00] }
+        ]
+      },
+      sheet_dash: {
+        title: "DVSheet-Dash results",
+        source: "Paper Table 17 dashboard overall scores under w = 0.5",
+        labels: [""],
+        rows: [
+          { name: "GLM-4.7", type: "open", values: [38.03] },
+          { name: "DeepSeek-V3.2", type: "open", values: [36.35] },
+          { name: "Gemini-3-Pro", type: "proprietary", values: [35.29] },
+          { name: "GPT-5.2", type: "proprietary", values: [33.98] },
+          { name: "GPT-4.1", type: "proprietary", values: [32.21] },
+          { name: "Grok-4", type: "proprietary", values: [27.78] },
+          { name: "Gemini-2.5-Pro", type: "proprietary", values: [23.60] },
+          { name: "Kimi-K2-Thinking", type: "proprietary", values: [19.37] },
+          { name: "Qwen-3-Coder-Plus", type: "open", values: [17.73] },
+          { name: "Qwen-3-235B-Thinking", type: "open", values: [17.01] },
+          { name: "Qwen-3-8B", type: "open", values: [4.06] }
         ]
       },
       evol: {
         title: "DV-Evol aggregated results",
-        source: "Paper Table 18 aggregated scores under w = 0.5 / 0.4 / 0.6",
-        labels: ["w=0.5", "w=0.4", "w=0.6"],
+        source: "Paper Table 18 aggregated scores under w = 0.5",
+        labels: ["w=0.5"],
         rows: [
-          { name: "Gemini-3-Pro", type: "proprietary", values: [51.44, 54.69, 48.20] },
-          { name: "Gemini-3-Flash", type: "proprietary", values: [49.46, 53.21, 45.78] },
-          { name: "Grok-4", type: "proprietary", values: [48.81, 52.02, 45.60] },
-          { name: "GPT-4.1", type: "proprietary", values: [44.67, 48.57, 40.78] },
-          { name: "GPT-5.2", type: "proprietary", values: [43.04, 46.79, 39.29] },
-          { name: "GPT-5.1", type: "proprietary", values: [39.36, 43.13, 35.58] },
-          { name: "Gemini-2.5-Pro", type: "proprietary", values: [36.63, 39.31, 33.94] },
-          { name: "Qwen3-VL-Plus", type: "open", values: [29.33, 30.97, 27.70] },
-          { name: "Qwen3-VL-32B", type: "open", values: [24.17, 25.10, 23.25] },
-          { name: "Qwen3-VL-8B", type: "open", values: [21.05, 22.50, 19.59] }
+          { name: "Gemini-3-Pro", type: "proprietary", values: [51.44] },
+          { name: "Gemini-3-Flash", type: "proprietary", values: [49.46] },
+          { name: "Grok-4", type: "proprietary", values: [48.81] },
+          { name: "GPT-4.1", type: "proprietary", values: [44.67] },
+          { name: "GPT-5.2", type: "proprietary", values: [43.04] },
+          { name: "GPT-5.1", type: "proprietary", values: [39.36] },
+          { name: "Gemini-2.5-Pro", type: "proprietary", values: [36.63] },
+          { name: "Qwen3-VL-Plus", type: "open", values: [29.33] },
+          { name: "Qwen3-VL-32B", type: "open", values: [24.17] },
+          { name: "Qwen3-VL-8B", type: "open", values: [21.05] }
         ]
       },
       interact: {
         title: "DV-Interact reported settings",
-        source: "Paper-reported three-setting results for DV-Interact",
-        labels: ["setting-1", "setting-2", "setting-3"],
+        source: "Paper-reported results for DV-Interact",
+        labels: [""],
         rows: [
-          { name: "Grok-4", type: "proprietary", values: [41.50, 40.40, 39.20] },
-          { name: "DeepSeek-V3.2", type: "open", values: [38.90, 37.90, 36.80] },
-          { name: "GPT-5.2", type: "proprietary", values: [36.20, 35.10, 34.00] },
-          { name: "Gemini-3-Pro", type: "proprietary", values: [35.70, 34.40, 33.20] },
-          { name: "Gemini-2.5-Pro", type: "proprietary", values: [32.60, 31.30, 30.10] },
-          { name: "GLM-4.7", type: "open", values: [30.80, 29.60, 28.40] },
-          { name: "Kimi-K2-Thinking", type: "proprietary", values: [28.50, 27.40, 26.30] },
-          { name: "GPT-4.1", type: "proprietary", values: [26.30, 25.70, 24.90] },
-          { name: "Qwen3-235B-A22B", type: "open", values: [21.60, 20.90, 20.10] },
-          { name: "Qwen3-8B", type: "open", values: [18.70, 18.10, 17.40] }
+          { name: "Grok-4", type: "proprietary", values: [41.50] },
+          { name: "DeepSeek-V3.2", type: "open", values: [38.90] },
+          { name: "GPT-5.2", type: "proprietary", values: [36.20] },
+          { name: "Gemini-3-Pro", type: "proprietary", values: [35.70] },
+          { name: "Gemini-2.5-Pro", type: "proprietary", values: [32.60] },
+          { name: "GLM-4.7", type: "open", values: [30.80] },
+          { name: "Kimi-K2-Thinking", type: "proprietary", values: [28.50] },
+          { name: "GPT-4.1", type: "proprietary", values: [26.30] },
+          { name: "Qwen3-235B-A22B", type: "open", values: [21.60] },
+          { name: "Qwen3-8B", type: "open", values: [18.70] }
         ]
       }
     };
@@ -1816,13 +1878,13 @@
     }
 
     function renderHostsIn(root = document) {
+      if (!root) return;
       root.querySelectorAll(".pdf-host").forEach((target) => {
         renderPdfCanvas(target);
       });
     }
 
     renderHostsIn(document.querySelector(".hero-shell"));
-    renderHostsIn(document.querySelector("#figures"));
     renderHostsIn(document.querySelector("#task-create"));
 
     const leaderboardList = document.getElementById("leaderboard-list");
@@ -1852,13 +1914,13 @@
             <div class="model-desc">Paper-reported score row for ${task.title}.</div>
           </div>
           <div class="score-cluster">
-            <div class="score-line"><span>${task.labels[0]}</span><div class="score-bar"><span style="width:${item.values[0]}%;"></span></div><strong>${item.values[0].toFixed(2)}</strong></div>
-            <div class="score-line"><span>${task.labels[1]}</span><div class="score-bar"><span style="width:${item.values[1]}%;"></span></div><strong>${item.values[1].toFixed(2)}</strong></div>
-            <div class="score-line"><span>${task.labels[2]}</span><div class="score-bar"><span style="width:${item.values[2]}%;"></span></div><strong>${item.values[2].toFixed(2)}</strong></div>
+            ${task.labels.map((label, labelIndex) => `
+              <div class="score-line"><span>${label && label.trim() ? label : "Score"}</span><div class="score-bar"><span style="width:${item.values[labelIndex]}%;"></span></div><strong>${item.values[labelIndex].toFixed(2)}</strong></div>
+            `).join("")}
           </div>
           <div class="primary-score">
             <strong>${item.values[0].toFixed(2)}</strong>
-            <span>${task.labels[0]}</span>
+            <span>${task.labels[0] && task.labels[0].trim() ? task.labels[0] : "Score"}</span>
           </div>
         </article>
       `).join("");
